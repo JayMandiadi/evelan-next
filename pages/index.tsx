@@ -50,7 +50,7 @@ function Home({ data, total_pages, page: initialPage }: Props) {
         <div className={styles.description}>
           <div className={styles.user_grid}>
             {users.map((user: IUser) => (
-              <div className={styles.user_card}>
+              <div className={styles.user_card} key={user.id}>
                 <Image alt="user avatar" src={user.avatar} width={30} height={30} style={{borderRadius: "30px"}} />
                 <p style={inter.style}>{user.id}</p>
                 <p style={inter.style}>{user.email}</p>
